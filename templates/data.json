@@ -13,6 +13,13 @@
     "width": 253,
     "height": 169 
    },
+   "Camoes": {
+    "name": "camoes.png",
+    "x": -1653,
+    "y": -8250,
+    "width": 192,
+    "height": 153 
+   },
    "Ct": {
     "name": "ct.png",
     "x": -13461,
