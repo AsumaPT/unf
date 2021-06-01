@@ -54,6 +54,7 @@ Number.prototype.between = function(a, b) {
       let zooming_in = false;
       let zooming_out = false;
       let zoom_time = 100;
+      let last_color = 0;
       //array with all loaded template-images
       let image_list = [];
       let counter = 0;
@@ -403,23 +404,27 @@ Number.prototype.between = function(a, b) {
           y_new = (coordsXY[2].substring(3) + coordsXY[3])*1;
           if (autocolor == true || autocolor == "true") {
               if (document.getElementById("minimap-box").style.display !== "none") {
-                  var x_left = x_window * 1 - minimap.width / zoomlevel / 2;
-                  var x_right = x_window * 1 + minimap.width / zoomlevel / 2;
-                  var y_top = y_window * 1 - minimap.height / zoomlevel / 2;
-                  var y_bottom = y_window * 1 + minimap.height / zoomlevel / 2;
-                  let c = ctx_minimap.getImageData(minimap.width/2, minimap.height/2, 1, 1).data;
-                  if (document.getElementById("palettebox")) {
+                      var x_left = x_window * 1 - minimap.width / zoomlevel / 2;
+                      var x_right = x_window * 1 + minimap.width / zoomlevel / 2;
+                      var y_top = y_window * 1 - minimap.height / zoomlevel / 2;
+                      var y_bottom = y_window * 1 + minimap.height / zoomlevel / 2;
+                      let c = ctx_minimap.getImageData(minimap.width/2, minimap.height/2, 1, 1).data;
+                      let core = c[0]+','+' '+c[1]+','+' '+c[2];
+                      console.log(core, last_color);
+                      if (last_color == 0 || last_color !== core) {
+                          last_color = core;
+                          if (document.getElementById("palettebox")) {
 
-                      if (c[3] > 0) {
-                          let core = c[0]+','+' '+c[1]+','+' '+c[2];
-                          console.log(core)
-                          clicarcor(core);
+                          if (c[3] > 0) {
+                              console.log(core)
+                              clicarcor(core);
+                          }
+
+                          } else {
+                              document.getElementById("palselbutton").click();
+                              paleta = document.getElementById("palettebox").querySelectorAll("*");
+                          }
                       }
-
-                  } else {
-                      document.getElementById("palselbutton").click();
-                      paleta = document.getElementById("palettebox").querySelectorAll("*");
-                  }
               }
           }
 
