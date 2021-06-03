@@ -1,14 +1,3 @@
-// ==UserScript==
-// @name         UNF Minimap
-// @namespace    http://tampermonkey.net/
-// @version      2.5
-// @description  Pixelplanet minimap for unf
-// @author       Some Anon
-// @match        https://pixelplanet.fun/*
-// @match        http://pixelplanet.fun/*
-// @grant        none
-// ==/UserScript==
-
 Number.prototype.between = function(a, b) {
     var min = Math.min.apply(Math, [a, b]),
       max = Math.max.apply(Math, [a, b]);
@@ -192,10 +181,10 @@ Number.prototype.between = function(a, b) {
                 case '202, 227, 255':
                     paleta[23].click();
                     break;
-                case '0, 131, 199':
+                case '0, 211, 221':
                     paleta[24].click();
                     break;
-                case '0, 211, 221':
+                case '0, 131, 199':
                     paleta[25].click();
                     break;
                 case '0, 0, 234':
