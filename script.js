@@ -399,13 +399,11 @@ Number.prototype.between = function(a, b) {
                       var y_bottom = y_window * 1 + minimap.height / zoomlevel / 2;
                       let c = ctx_minimap.getImageData(minimap.width/2, minimap.height/2, 1, 1).data;
                       let core = c[0]+','+' '+c[1]+','+' '+c[2];
-                      console.log(core, last_color);
                       if (last_color == 0 || last_color !== core) {
                           last_color = core;
                           if (document.getElementById("palettebox")) {
 
                           if (c[3] > 0) {
-                              console.log(core)
                               clicarcor(core);
                           }
 
