@@ -1,3 +1,5 @@
+
+
 Number.prototype.between = function(a, b) {
     var min = Math.min.apply(Math, [a, b]),
       max = Math.max.apply(Math, [a, b]);
@@ -6,7 +8,6 @@ Number.prototype.between = function(a, b) {
   var range = 25;
   window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaPT/unf/main/';
 
-  window.addEventListener('load', function () {
 
       //Regular Expression to get coordinates out of URL
       let re = /(.*)\/\?p=(\-?(?:\d*)),(\-?(?:\d*))/g;
@@ -693,4 +694,3 @@ Number.prototype.between = function(a, b) {
       coorDOM = document.getElementsByClassName("coorbox")[0];
     }
     updateloop();
-  },false )
