@@ -5,14 +5,21 @@
     "y": -9580,
     "width": 377,
     "height": 636 
-   },
+   }, 
    "France": {
     "name": "france.png",
     "x": -1007,
     "y": -11216,
     "width": 2392,
     "height": 2339 
-   },
+   }, 
+   "Czechia": {
+    "name": "zech_Republic_2.0.png",
+    "x": 2191,
+    "y": -11222,
+    "width": 1237,
+    "height": 720 
+   }, 
    "Switzerland": {
     "name": "swiss.png",
     "x": 1063,
